@@ -81,7 +81,7 @@ membuka jendela baru untuk meminta token untuk testnet. Klik Connect Wallet Via 
 
 Sebelum Membuat Validator Silahkan Check Dulu Asset Saldo Kalian Ada Atau Tidak
 ```
-teritorid query bank balances $HAQQ_WALLET_ADDRESS
+haqqd query bank balances $HAQQ_WALLET_ADDRESS
 ```
 ```
 haqqd tx staking create-validator \
