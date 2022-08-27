@@ -76,3 +76,25 @@ source $HOME/.bash_profile
 Setelah Anda masuk ke ekstensi MetaMask, kunjungi Faucet : https://testedge.haqq.network/
 
 membuka jendela baru untuk meminta token untuk testnet. Klik Connect Wallet Via Metamask
+
+## Buat Validator
+
+Sebelum Membuat Validator Silahkan Check Dulu Asset Saldo Kalian Ada Atau Tidak
+```
+teritorid query bank balances $HAQQ_WALLET_ADDRESS
+```
+```
+haqqd tx staking create-validator \
+  --amount 1000000aISLM \
+  --pubkey $(haqqd tendermint show-validator) \
+  --moniker $NODENAME \
+  --chain-id $HAQQ_CHAIN_ID \
+  --commission-rate="0.10" \
+  --commission-max-rate="0.20" \
+  --commission-max-change-rate="0.01" \
+  --min-self-delegation="1000000" \
+  --gas="auto" \
+  --gas-prices="0.025aISLM" \
+  --from $WALLET \
+  --node https://rpc.tm.testedge.haqq.network:443
+```
