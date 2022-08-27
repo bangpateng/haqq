@@ -38,7 +38,7 @@ Selanjutnya Anda harus memastikan validator Anda menyinkronkan blok. Anda dapat 
 haqqd status 2>&1 | jq .SyncInfo
 ```
 
-## Gunakan Snpashoot (Jika Log Belun Sinkron)
+## Gunakan Snpashoot (Optional Tidak Harus / Boleh di Sekip)
 
 Instal lz4 jika diperlukan
 ```
