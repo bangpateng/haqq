@@ -106,16 +106,28 @@ haqqd tx staking create-validator \
 ## Edit Validator
 
 ```
-haqqd tx staking edit-validator
-  --moniker=$NODENAME \
-  --website="https://islamiccoin.net" \
-  --identity=6A0D65E29A4CBC8E \
-  --details="To infinity and beyond!" \
-  --chain-id=$HAQQ_CHAIN_ID \
-  --gas-prices="0.025aISLM" \
-  --from=$WALLET \
-  --commission-rate="0.10"
+haqqd tx staking edit-validator \
+ --chain-id $HAQQ_CHAIN_ID \
+ --identity="EB7784D8888B8552" \
+ --details="Ente Emang Kadang Kadang Ente" \
+ --website="www.bangpateng.com" \
+ --from $WALLET \
+ --fees 0.025aISLM \
+ --keyring-backend file
   ```
+
+## Nambah Delegate
+
+Ingat 1000000 aISLM = 1 ISLM
+```
+haqqd tx staking delegate YOUR_VALOPER_ADDRESS 10000000aISLM --from=$WALLET --chain-id $HAQQ_CHAIN_ID --gas-prices=0.025aISLM --keyring-backend file
+```
+### Cara Mengetahui Valoper Address
+
+- Check di Web : https://exp.nodeist.net/
+- Cari Nama Validator Kalian
+- Copy Link Address Paling Belakang, Itu Address Valoper Kalian
+
 
 ## Delet Node
 ```
