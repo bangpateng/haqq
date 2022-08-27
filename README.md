@@ -102,6 +102,7 @@ haqqd tx staking create-validator \
   --gas-prices="0.025aISLM" \
   --from $WALLET \
   --node https://rpc.tm.testedge.haqq.network:443
+  --keyring-backend file
 ```
 ## Edit Validator
 
