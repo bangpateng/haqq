@@ -113,7 +113,6 @@ haqqd tx staking edit-validator
   --identity=6A0D65E29A4CBC8E \
   --details="To infinity and beyond!" \
   --chain-id=$HAQQ_CHAIN_ID \
-  --gas="auto" \
   --gas-prices="0.025aISLM" \
   --from=$WALLET \
   --commission-rate="0.10"
