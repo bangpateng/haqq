@@ -75,9 +75,9 @@ curl -OL https://storage.googleapis.com/haqq-testedge-snapshots/genesis.json
 mv genesis.json $HOME/.haqqd/config/genesis.json
 haqqd validate-genesis
 
-# Set Peer dan Seed
-PEERS=`curl -sL https://raw.githubusercontent.com/haqq-network/testnets/main/TestEdge/peers.txt | sort -R | head -n 10 | awk '{print $1}' | paste -s -d, -`
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.haqqd/config/config.toml
+# State Sync
+curl -OL https://raw.githubusercontent.com/haqq-network/testnets/main/TestEdge/state_sync.sh
+chmod +x state_sync.sh && ./state_sync.sh
 
 # create service
 sudo tee /etc/systemd/system/haqqd.service > /dev/null <<EOF
