@@ -79,11 +79,6 @@ haqqd validate-genesis
 PEERS=`curl -sL https://raw.githubusercontent.com/haqq-network/testnets/main/TestEdge/peers.txt | sort -R | head -n 10 | awk '{print $1}' | paste -s -d, -`
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.haqqd/config/config.toml
 
-# download snapshoot
-apt-get install lz4
-curl -OL https://storage.googleapis.com/haqq-testedge-snapshots/haqq_latest.tar.lz4
-lz4 -c -d haqq_latest.tar.lz4 | tar -x -C $HOME/.haqqd
-
 # create service
 sudo tee /etc/systemd/system/haqqd.service > /dev/null <<EOF
 [Unit]
