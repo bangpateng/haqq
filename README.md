@@ -34,26 +34,17 @@ wget -O haqq.sh https://raw.githubusercontent.com/bangpateng/haqq/main/haqq.sh &
 source $HOME/.bash_profile
 ```
 Selanjutnya Anda harus memastikan validator Anda menyinkronkan blok. Anda dapat menggunakan perintah di bawah ini untuk memeriksa status sinkronisasi
+
+```
+sudo journalctl -u haqqd -f -o cat
+```
+Biarkan Hingga Beberapa Menit, Sampai Log Nya Jalan dan Mendapatkan Block Height
+
 ```
 haqqd status 2>&1 | jq .SyncInfo
 ```
 
-## Gunakan Snpashoot (Optional Tidak Harus / Boleh di Sekip)
 
-Instal lz4 jika diperlukan
-```
-apt-get install lz4
-```
-Unduh Snapshootnya:
-```
-curl -OL https://storage.googleapis.com/haqq-testedge-snapshots/haqq_latest.tar.lz4
-```
-Dekompresi snapshot ke lokasi database Anda. Lokasi database Anda akan mempengaruhi ~/.haqqd tergantung pada implementasi node Anda.
-```
-lz4 -c -d haqq_latest.tar.lz4 | tar -x -C $HOME/.haqqd
-```
-
-Note : Jika Kalian Sudah Menggunakan Snapshoot di Atas, Jangan Lupa Untuk Restart Sistem `sudo systemctl restart haqqd` dan Check Log Lagi `sudo journalctl -u haqqd -f -o cat`
 
 ## Buat dompet
 
