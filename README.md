@@ -7,6 +7,12 @@
   <img height="100" height="auto" src="https://user-images.githubusercontent.com/38981255/187036471-e23ab080-2e03-46b7-8513-23e1f6612b4a.png">
 </p>
 
+# HAQQ TESTNET
+
+## Tutorial Official
+
+https://docs.haqq.network/guides/validators/setup.html
+
 ## Specification VPS
 
 Untuk menjalankan node testnet, Anda memerlukan mesin dengan persyaratan perangkat keras minimum berikut:
