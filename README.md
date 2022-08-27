@@ -1,0 +1,2 @@
+# haqq
+haqq testnet
