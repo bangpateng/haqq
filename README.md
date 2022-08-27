@@ -44,8 +44,6 @@ Biarkan Hingga Beberapa Menit, Sampai Log Nya Jalan dan Mendapatkan Block Height
 haqqd status 2>&1 | jq .SyncInfo
 ```
 
-
-
 ## Buat dompet
 
 Untuk membuat dompet baru Anda dapat menggunakan perintah di bawah ini. Jangan lupa simpan mnemonicnya
@@ -76,6 +74,13 @@ source $HOME/.bash_profile
 Setelah Anda masuk ke ekstensi MetaMask, kunjungi Faucet : https://testedge.haqq.network/
 
 membuka jendela baru untuk meminta token untuk testnet. Klik Connect Wallet Via Metamask
+
+Jalankan Perintah Untuk Mendapatkan Private Key
+```
+haqqd keys unsafe-export-eth-key $WALLET --keyring-backend file
+```
+- Jangan Lupa Masukan Password Keyring Yang Kalian Buat Saat membuat Wallet di Awal dan Import Privatekey ke Metamask
+- Kirim Saldo Faucet Yg ada di Wallet pertama pas claim Faucet kirim ke Address 0x.. Yang Private Keynya Baru Kalian Import
 
 ## Buat Validator
 
