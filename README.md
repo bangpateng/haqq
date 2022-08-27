@@ -120,3 +120,14 @@ haqqd tx staking edit-validator
   --from=$WALLET \
   --commission-rate="0.10"
   ```
+
+## Delet Node
+```
+sudo systemctl stop haqqd
+sudo systemctl disable haqqd
+sudo rm /etc/systemd/system/haqq* -rf
+sudo rm $(which haqqd) -rf
+sudo rm $HOME/.haqqd* -rf
+sudo rm $HOME/haqq -rf
+sed -i '/HAQQ_/d' ~/.bash_profile
+```
