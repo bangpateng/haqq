@@ -49,7 +49,7 @@ haqqd status 2>&1 | jq .SyncInfo
 Untuk membuat dompet baru Anda dapat menggunakan perintah di bawah ini. Jangan lupa simpan mnemonicnya
 dan Untuk Keyring Pharse Buat Kata Sandi Bebas
 ```
-haqqd keys add $WALLET --keyring-backend file
+haqqd keys add $WALLET
 ```
 (OPSIONAL) Untuk memulihkan dompet Anda menggunakan frase seed
 ```
