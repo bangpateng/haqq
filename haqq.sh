@@ -76,6 +76,7 @@ mv genesis.json $HOME/.haqqd/config/genesis.json
 haqqd validate-genesis
 
 # State Sync
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0aISLM\"/" $HOME/.haqqd/config/app.toml
 curl -OL https://raw.githubusercontent.com/haqq-network/testnets/main/TestEdge/state_sync.sh
 chmod +x state_sync.sh && ./state_sync.sh
 
